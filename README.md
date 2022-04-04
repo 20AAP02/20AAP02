@@ -22,11 +22,18 @@
 ```python
 class antonio():
     
+  def next_tools_to_learn(tools):
+    tools.append("flutter");
+    tools.append("react");
+    tools.append("swift");
+    tools.append("c++");
+  
   def __init__(self):
     self.name = "António Abranches Pinto";
     self.username = "20AAP02";
     self.location = "Lisbon, Portugal";
     self.school = "42 Lisbon";
+    next_tools_to_learn(self.tools);
   
   def __str__(self):
     return self.name
