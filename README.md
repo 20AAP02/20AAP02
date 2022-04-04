@@ -46,10 +46,8 @@ if __name__ == '__main__':
 </p>
 <br>
 
-[![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Antóino%20Trips's%20Contribution%20Graph&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545)](https://abhigyantrips.dev)
+[![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Antóino%20Trips's%20Contribution%20Graph&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545)]
 
-------
+-----
 
-Credit: [abhigyantrips](https://github.com/abhigyantrips)
-
-Last Edited on: 24/12/2021
+Last Edited on: 04/04/2022
