@@ -2,7 +2,7 @@
   <b>António Abranches Pinto</b>
 </h1>
 <h6 align="center">
-  <b>Hey! I'm António, currently student at 42 Lisbon! 🇵🇹 </b>
+  <b>Hey! I'm António, currently studing at 42 Lisbon! 🇵🇹 </b>
 </h6>
 
 <br>
