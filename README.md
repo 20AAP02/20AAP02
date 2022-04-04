@@ -20,20 +20,18 @@
 </p>
 
 ```python
-class AbhigyanTrips():
+class 42_student():
     
   def __init__(self):
-    self.name = "Abhigyan Tripathi";
-    self.username = "abhigyantrips";
-    self.location = "Mumbai, India";
-    self.twitter = "@abhigyantrips";
-    self.web = "https://abhigyantrips.dev";
+    self.name = "António Abranches Pinto";
+    self.username = "20AAP02";
+    self.location = "Lisbon, Portugal";
   
   def __str__(self):
     return self.name
 
 if __name__ == '__main__':
-    me = AbhigyanTrips()
+    me = 42_student()
 ```
 
 <div align="center">
