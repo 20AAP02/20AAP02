@@ -1,8 +1,9 @@
 <h1 align="center">
   <b>António Abranches Pinto</b>
 </h1>
-
-Hey! I'm António, currently student at 42 Lisbon! 🇵🇹 
+<h6 align="center">
+  <b>Hey! I'm António, currently student at 42 Lisbon! 🇵🇹 </b>
+</h6>
 
 <br>
 
