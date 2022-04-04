@@ -44,9 +44,10 @@ if __name__ == '__main__':
 
 ![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=António%20's%20Contribution%20Graph&theme=gruvbox&bg_color=282828&hide_border=true&line=3cc7a4&point=3cc7a4)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 <br/>
-
+<p align="left">
+  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+</p>
 <p align="left">
   <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=gruvbox&hide_border=true&count_private=true" />
     <img width="49.5%" src="https://github-readme-streak-stats.herokuapp.com/?user=20AAP02&theme=gruvbox&hide_border=true" />
