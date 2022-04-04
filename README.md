@@ -43,16 +43,14 @@ if __name__ == '__main__':
 ## My Statistics
 
 <br/>
-<p align="left">
-  <img width="100%" src="https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Contribution%20Graph&theme=vue-dark&hide_border=true"/>
-</p>
-<p align="left">
-  <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
-</p>
-<p align="left">
-  <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" />
-    <img width="49.5%" src="https://github-readme-streak-stats.herokuapp.com/?user=20AAP02&theme=vue-dark&hide_border=true" />
-</p>
+  <p align="left">
+    <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
+    <img width="49.5%" src="https://github-readme-stats.vercel.app/api/pin/?username=20AAP02&repo=github-readme-stats&theme=vue-dark&hide_border=true"/>
+  </p>
+  <p align="left">
+    <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" />
+      <img width="49.5%" src="https://github-readme-streak-stats.herokuapp.com/?user=20AAP02&theme=vue-dark&hide_border=true" />
+  </p>
 <br>
 
 
