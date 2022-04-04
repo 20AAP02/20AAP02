@@ -49,7 +49,7 @@ if __name__ == '__main__':
   <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact"/>
 </p>
 <p align="left">
-  <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=gruvbox&hide_border=true&count_private=true" />
+  <img width="100%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=gruvbox&hide_border=true&count_private=true" />
     <img width="49.5%" src="https://github-readme-streak-stats.herokuapp.com/?user=20AAP02&theme=gruvbox&hide_border=true" />
 </p>
 <br>
