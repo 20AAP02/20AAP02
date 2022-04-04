@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
 <br/>
 <p align="left">
-  <img width="100%" src="https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=António%20's%20Contribution%20Graph&theme=vue-dark&hide_border=true"/>
+  <img width="100%" src="https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Contribution%20Graph&theme=vue-dark&hide_border=true"/>
 </p>
 <p align="left">
   <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
