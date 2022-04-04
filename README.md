@@ -42,9 +42,10 @@ if __name__ == '__main__':
 
 ## My Statistics
 
-![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=António%20's%20Contribution%20Graph&theme=vue-dark&bg_color=282828&hide_border=true&line=3cc7a4&point=3cc7a4)
-
 <br/>
+<p align="left">
+  <img width="100%" src="https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=António%20's%20Contribution%20Graph&theme=vue-dark&hide_border=true"/>
+</p>
 <p align="left">
   <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
 </p>
