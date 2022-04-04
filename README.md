@@ -15,8 +15,8 @@
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-C-3cc7a4?style=for-the-badge&logo=c&logoColor=3cc7a4&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Ruby-c7473c?style=for-the-badge&logo=ruby&logoColor=c7473c&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Shell-7d9ac7?style=for-the-badge&logo=shell&logoColor=7d9ac7&labelColor=282828">
+  <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Shell-34eb4f?style=for-the-badge&logo=shell&logoColor=34eb4f&labelColor=282828">
 </div>
 </p>
 
