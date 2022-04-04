@@ -20,25 +20,20 @@
 </p>
 
 ```python
-class 42_student():
+class antonio():
     
   def __init__(self):
     self.name = "António Abranches Pinto";
     self.username = "20AAP02";
     self.location = "Lisbon, Portugal";
+    self.school = "42 Lisbon";
   
   def __str__(self):
     return self.name
 
 if __name__ == '__main__':
-    me = 42_student()
+    me = antonio()
 ```
-
-<div align="center">
-  <a href="https://open.spotify.com/user/6s6pbtefezpookh8gwnkko15v">
-    <img src="https://readme-spotify-tingz.vercel.app/api/now-playing">
-  </a>
-</div>
 
 <!--
 <div align="center">
