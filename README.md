@@ -48,7 +48,7 @@ if __name__ == '__main__':
       <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=20AAP02&theme=vue-dark&hide_border=true" />
   </p>
   <p align="left">
-    <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
+    <img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
   </p>
 <br>
 
