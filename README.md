@@ -36,18 +36,6 @@ if __name__ == '__main__':
 ```
 -----
 
-## My Projects
-
-<br/>
-  <p align="left">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=20AAP02&repo=github-readme-stats&repo=https://github.com/20AAP02/Fdf"/>
-  </p>
-  <p align="left">
-  </p>
-<br>
-
------
-
 ## My Statistics
 
 <br/>
