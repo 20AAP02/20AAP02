@@ -45,7 +45,7 @@ if __name__ == '__main__':
 <br/>
   <p align="left">
     <img width="49.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true"/>
-    <img width="49.5%" src="https://github-readme-stats.vercel.app/api/wakatime?username=20AAP02&theme=vue-dark&hide_border=true"/>
+    <img width="49.5%" src="https://github-readme-stats.vercel.app/api/20AAP022?username=20AAP02&theme=vue-dark&hide_border=true"/>
   </p>
   <p align="left">
     <img width="49.5%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" />
