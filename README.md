@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
 <br/>
   <p align="left">
-    [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=20AAP02&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=20AAP02&repo=github-readme-stats"
   </p>
   <p align="left">
   </p>
