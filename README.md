@@ -9,7 +9,7 @@ Hey! I'm António, currently student at 42 Lisbon! 🇵🇹
 <p>
 <div align="center">
   <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
-  <img src="https://img.shields.io/badge/-CSS-0000FF?style=for-the-badge&logo=css3&logoColor=0000FF&labelColor=282828">
+  <img src="https://img.shields.io/badge/-CSS-00002F?style=for-the-badge&logo=css3&logoColor=00002F&labelColor=282828">
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">
   <img src="https://img.shields.io/badge/-C-98b982?style=for-the-badge&logo=c&logoColor=98b982&labelColor=282828">
   <img src="https://img.shields.io/badge/-Mysql-98b982?style=for-the-badge&logo=Mysql&logoColor=98b982&labelColor=282828">
