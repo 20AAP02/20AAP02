@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 ## My Statistics
 
-![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Antóino%20Trips's%20Contribution%20Graph&theme=gruvbox&bg_color=282828&hide_border=true&line=d1a01f&point=c58545)
+![António's Activity Graph](https://activity-graph.herokuapp.com/graph?username=20AAP02&custom_title=Antóino%20Trips's%20Contribution%20Graph&theme=gruvbox&bg_color=282828&hide_border=true&line=3cc7a4&point=3cc7a4)
 
 <br/>
 <p align="left">
