@@ -28,6 +28,7 @@ class antonio():
     tools.append("react");
     tools.append("swift");
     tools.append("c++");
+    tools.append("kotlin");
   
   def __init__(self):
     self.name = "António Abranches Pinto";
