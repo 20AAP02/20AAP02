@@ -24,11 +24,9 @@
 class antonio():
     
   def next_tools_to_learn(tools):
-    tools.append("flutter");
-    tools.append("react");
+    tools.append("neural networks");
     tools.append("swift");
     tools.append("c++");
-    tools.append("kotlin");
   
   def __init__(self):
     self.name = "António Abranches Pinto";
