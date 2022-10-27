@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/-Ruby-c7473c?style=for-the-badge&logo=ruby&logoColor=c7473c&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Shell-34eb4f?style=for-the-badge&logo=shell&logoColor=34eb4f&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Bash-34eb4f?style=for-the-badge&logo=shell&logoColor=34eb4f&labelColor=282828">
+  <img src="https://img.shields.io/badge/-Bash-7d9ac7?style=for-the-badge&logo=shell&logoColor=34eb4f&labelColor=282828">
 </div>
 </p>
 
