@@ -1,5 +1,4 @@
-<h3 align=center><strong>![imagem](https://user-images.githubusercontent.com/71015248/203455859-e07dd309-7c55-4867-a919-b26d0cc833a3.png)
- Hey!</strong></h3>
+<h3 align=center><strong>👋 Hey! 👋</strong></h3>
 
 <h3 align=center>
 I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
