@@ -1,6 +1,6 @@
-<p align=center>
+<p align=center><font size="6">
 <strong>Hey!</strong><br>I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
-</h3>
+</font></p>
 
 ----
 
