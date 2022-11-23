@@ -1,5 +1,6 @@
+<strong>Hey!</strong>
 <h3 align=center>
-<strong>Hey!</strong><br>I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
+I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
 </h3>
 
 ----
