@@ -1,4 +1,4 @@
-<h3 align=center, style="font-weight:normal">
+<h3 align=center; style="font-weight:normal">
 <strong>Hey!</strong><br>I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
 </h3>
 
