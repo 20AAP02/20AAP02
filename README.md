@@ -1,6 +1,6 @@
-<h3 align="center">
+<div align="center">
  <strong>Hey!</strong><br>I'm António, currently studing at **42 Lisbon**!<br><sub>Made in **Portugal** 🇵🇹</sub>
-</h3>
+</div>
 
 ----
 
