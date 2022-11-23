@@ -1,5 +1,5 @@
 <div align="center">
- <strong>Hey!</strong><br>I'm António, currently studing at **42 Lisbon**!<br><sub>Made in **Portugal** 🇵🇹</sub>
+ <strong>Hey!</strong><br>I'm António, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
 </div>
 
 ----
