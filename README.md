@@ -1,6 +1,6 @@
-<div align=center>
+<h3 align=center font-weight:normal>
 <strong>Hey!</strong><br>I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
-</div>
+</h3>
 
 ----
 
