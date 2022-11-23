@@ -1,5 +1,5 @@
 <h3 align="center">
-  <b>Hey! I'm António, currently studing at 42 Lisbon! 🇵🇹 </b>
+  <b>Hey!<br> I'm António, currently studing at 42 Lisbon!<br> <i>Made in Portugal</i>🇵🇹 </b>
 </h3>
 
 ----
