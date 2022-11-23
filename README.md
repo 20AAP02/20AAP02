@@ -1,4 +1,7 @@
-<strong>Hey!</strong>
+<h3 align=center><strong>Hey!</strong></h3>
+
+----
+
 <h3 align=center>
 I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
 </h3>
