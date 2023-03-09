@@ -1,9 +1,7 @@
 <h4 align=center><strong>👋 Hey!</strong></h4>
 
 <h3 align=center>
-I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>x-special/nautilus-clipboard
-copy
-file:///home/antonio/Desktop/emojipng.com-8981952.png
+I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong> 🇵🇹</sub>
 
 </h3>
 
