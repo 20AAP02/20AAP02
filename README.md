@@ -16,8 +16,8 @@ I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-C -3cc7a4?style=for-the-badge&logo=c&logoColor=3cc7a4&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Bas-404245?style=for-the-badge&logo=linux&logoColor=428028&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-C++-000080?style=for-the-badge&logo=c++&logoColor=ffffff&labelColor=282828">
+  <img src="https://img.shields.io/badge/-Bash-404245?style=for-the-badge&logo=linux&logoColor=428028&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-C++-000080?style=for-the-badge&logo=C++&logoColor=ffffff&labelColor=282828">
 </div>
 </p>
 
