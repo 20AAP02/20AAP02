@@ -10,7 +10,7 @@
 
 ----
 
-<h4 align="center">Computer Science Student</h4>
+<h4 align="center">Computer Science Student</h4><br>
 
 <p>
 <div align="center">
