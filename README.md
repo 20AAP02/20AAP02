@@ -23,18 +23,18 @@ I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<
 
 ```python
 class antonio():
-    
-  def next_tools_to_learn(tools):
-    tools.append("neural networks");
-    tools.append("swift");
-    tools.append("c++");
-  
+
   def __init__(self):
-    self.name = "António Abranches Pinto";
-    self.username = "20AAP02";
-    self.location = "Lisbon, Portugal";
-    self.school = "42 Lisbon";
-    next_tools_to_learn(self.tools);
+    self.name = "António Abranches Pinto"
+    self.username = "20AAP02"
+    self.location = "Lisbon, Portugal"
+    self.school = "42 Lisbon"
+    next_tools_to_learn(self.tools)
+  
+  def next_tools_to_learn(self, tools):
+    tools.append("neural networks")
+    tools.append("swift")
+    tools.append("react")
   
   def __str__(self):
     return self.name
