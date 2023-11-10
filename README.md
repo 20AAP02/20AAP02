@@ -15,9 +15,9 @@
 <p>
 <div align="center">
   <img src="https://img.shields.io/badge/-C++-0000b0?style=for-the-badge&logo=Cplusplus&logoColor=0000b0&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Docker-528deb?style=for-the-badge&logo=docker&logoColor=528deb&labelColor=282828">
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-C -3cc7a4?style=for-the-badge&logo=c&logoColor=3cc7a4&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Docker-528deb?style=for-the-badge&logo=docker&logoColor=528deb&labelColor=282828">
   <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Bash-428028?style=for-the-badge&logo=linux&logoColor=428028&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-TypeScript-528deb?style=for-the-badge&logo=TypeScript&logoColor=528deb&labelColor=282828">
