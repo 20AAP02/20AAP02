@@ -14,7 +14,7 @@
 
 <p>
 <div align="center">
-  <img src="https://img.shields.io/badge/-C++-0000b0?style=for-the-badge&logo=Cplusplus&logoColor=0000b0&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-C++-0000b0?style=for-the-badge&logo=Cplusplus&logoColor=018f04&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Docker-528deb?style=for-the-badge&logo=docker&logoColor=1656ba&labelColor=282828">
   <img src="https://img.shields.io/badge/-C -3cc7a4?style=for-the-badge&logo=c&logoColor=3cc7a4&labelColor=282828">&#160
