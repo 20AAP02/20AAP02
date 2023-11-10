@@ -5,12 +5,12 @@
 </h4>
 
 <h3 align=center>
-  I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br><sub>Made in <strong>Portugal</strong></sub>
+  I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br>
 </h3>
 
 ----
 
-<h4 align="center">Computer Science Student</h4><br>
+<p align="center">Computer Science Student</p><br>
 
 <p>
 <div align="center">
