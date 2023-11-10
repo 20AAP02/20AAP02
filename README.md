@@ -38,7 +38,6 @@ class antonio():
   def next_tools_to_learn(self, tools):
     tools.append("neural networks")
     tools.append("swift")
-    tools.append("react")
   
   def __str__(self):
     return self.name
