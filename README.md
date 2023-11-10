@@ -14,15 +14,15 @@
 
 <p>
 <div align="center">
-  <img src="https://img.shields.io/badge/-C++-1aad3c?style=for-the-badge&logo=Cplusplus&logoColor=1aad3c&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Docker-1656ba?style=for-the-badge&logo=docker&logoColor=1656ba&labelColor=282828">
-  <img src="https://img.shields.io/badge/-C -018f04?style=for-the-badge&logo=c&logoColor=018f04&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Bash-428028?style=for-the-badge&logo=linux&logoColor=428028&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-TypeScript-528deb?style=for-the-badge&logo=TypeScript&logoColor=528deb&labelColor=282828">
-  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-CSS-3f6bb0?style=for-the-badge&logo=css3&logoColor=3f6bb0&labelColor=282828">
+  <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=Cplusplus&logoColor=00599C&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=282828">
+  <img src="https://img.shields.io/badge/-C -A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Mysql-4479A1?style=for-the-badge&logo=Mysql&logoColor=4479A1&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-GNU Bash-4EAA25?style=for-the-badge&logo=GNU Bash&logoColor=4EAA25&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=3178C6&labelColor=282828">
+  <img src="https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=1572B6&labelColor=282828">
 </div>
 </p>
 
