@@ -3,7 +3,7 @@
   [![github](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)][1]
   
 </h4>
-<strong align="center"> I'm António, currently studing at 42 Lisbon!</strong><br>
+<p align="center"> <strong>I'm António, currently studing at 42 Lisbon!</strong></p><br>
 
 ----
 
