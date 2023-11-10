@@ -4,9 +4,7 @@
   
 </h4>
 
-<h3 align=center>
-  I'm <strong>António</strong>, currently studing at <strong>42 Lisbon</strong>!<br>
-</h3>
+  # I'm António, currently studing at 42 Lisbon!<br>
 
 ----
 
