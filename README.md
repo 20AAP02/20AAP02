@@ -14,11 +14,11 @@
 
 <p>
 <div align="center">
-  <img src="https://img.shields.io/badge/-C++-018f04?style=for-the-badge&logo=Cplusplus&logoColor=1aad3c&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-C++-1aad3c?style=for-the-badge&logo=Cplusplus&logoColor=1aad3c&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Docker-1656ba?style=for-the-badge&logo=docker&logoColor=1656ba&labelColor=282828">
-  <img src="https://img.shields.io/badge/-C -3cc7a4?style=for-the-badge&logo=c&logoColor=018f04&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Mysql-018f04?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-C -018f04?style=for-the-badge&logo=c&logoColor=018f04&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Mysql-7d9ac7?style=for-the-badge&logo=Mysql&logoColor=7d9ac7&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Bash-428028?style=for-the-badge&logo=linux&logoColor=428028&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-TypeScript-528deb?style=for-the-badge&logo=TypeScript&logoColor=528deb&labelColor=282828">
   <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">&#160
