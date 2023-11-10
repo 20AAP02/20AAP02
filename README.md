@@ -18,7 +18,7 @@
   <img src="https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=E34F26&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=Cplusplus&logoColor=00599C&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-C -A8B9CC?style=for-the-badge&logo=c&logoColor=A8B9CC&labelColor=282828">&#160
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=282828">&#160
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=ede502&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-GNU Bash-4EAA25?style=for-the-badge&logo=GNU Bash&logoColor=4EAA25&labelColor=282828">&#160
   <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=282828">
   <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=3178C6&labelColor=282828">
