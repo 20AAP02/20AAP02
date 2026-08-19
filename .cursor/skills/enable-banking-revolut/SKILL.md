@@ -1,16 +1,17 @@
 ---
 name: enable-banking-revolut
-description: Set up Enable Banking, connect António's Revolut account, fetch recent transactions, and sync expenses plus balances into the Notion Finances 2026 tables. Use for daily Cursor Automations, Open Banking reconnects, and Revolut expense sync.
+description: Access António's live Revolut bank account data (balances and transactions) via Enable Banking Open Banking AIS — not Revolut X crypto. Use when he asks about Revolut spending, account balances, recent transactions, Open Banking, Enable Banking, or syncing expenses into Notion Finances 2026.
 ---
 
-# Enable Banking → Revolut → Notion
+# Access Revolut account data (Enable Banking AIS)
 
-Personal AIS (account information) sync for António Abranches Pinto. Do **not** scrape Revolut. Use Enable Banking, then write into the existing Notion finance databases.
+Personal Open Banking access for António Abranches Pinto. Do **not** scrape the Revolut app or website. Do **not** use Revolut X / crypto skills — this is the EUR bank account (AIS), not the exchange.
 
 This GitHub repo is **public**. Never commit PEMs, session ids, IBANs, or raw bank dumps.
 
 ## When to use
 
+- User asks for Revolut balances, transactions, or “what did I spend”
 - User asks to connect Revolut / Enable Banking / Open Banking
 - Daily automation: check Revolut expenses and sync Notion
 - Session expired and Revolut consent must be renewed
@@ -62,6 +63,15 @@ python3 scripts/fetch_transactions.py --wait --days 30
 
 `--wait` polls `GET /application` until `active`, starts `POST /auth`, captures the redirect `code` from webhook.site, `POST /sessions`, then dumps transactions.
 
+To only list authorised accounts and balances (redact IBANs in any reply):
+
+```bash
+python3 -m enablebanking_sync accounts
+python3 -m enablebanking_sync ping
+```
+
+Session is already established. Consent lasts about 90 days (`valid_until` in `~/.enablebanking/session.json`). Spending account uid is stored on Notion **Revolut — main** (`Open banking uid`).
+
 ## One-time Enable Banking setup (agent)
 
 Do **not** send the user to the Control Panel. The agent:
@@ -76,11 +86,7 @@ Current production app: `Cursor Notion finance sync`, kid `2ecac023-1c4b-4ec5-8b
 - `https://webhook.site/1475019f-7adb-43ef-9f2c-af20a0e5d812`
 - `https://enablebanking.com/api/auth_redirect`
 
-Account linking URL (user opens this first):
-
-https://tilisy.enablebanking.com/ais/start?sessionid=84554ed9-e389-4c39-b550-8d584d494f97
-
-If PT linking fails in Revolut, retry country `LT` (Revolut Bank UAB). Share every EUR pocket that should sync (main / subscriptions / savings / Ford Fiesta if shown). Open Banking often exposes **one EUR current account**, not every pocket.
+Linking URLs expire in about **15 minutes**. Always mint a fresh Control Panel `POST /api/link_accounts` URL; never reuse an old `tilisy.enablebanking.com` `sessionid`. If PT linking fails in Revolut, retry country `LT` (Revolut Bank UAB). Open Banking often exposes **one EUR current account**, not every pocket.
 
 After the app is `active`, `--wait` starts AIS authorisation automatically. Give the user that second Revolut URL; capture `code` from webhook.site — do not ask them to paste it.
 
