@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import json
+import tempfile
 import unittest
+from datetime import datetime, timezone
+from pathlib import Path
 
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
@@ -16,8 +20,16 @@ from enablebanking_sync.classify import (
     month_url,
     open_banking_id,
 )
-from enablebanking_sync.client import EnableBankingConfig, code_from_redirect_url, make_jwt
+from enablebanking_sync.client import (
+    EnableBankingConfig,
+    code_from_redirect_url,
+    jwt_metadata,
+    make_jwt,
+)
+from enablebanking_sync.fetch import _pending_auth_is_fresh, redact_iban
+from enablebanking_sync.home import load_home_credentials
 from enablebanking_sync.plan import build_expense_plans, pick_balance, plan_to_dict
+from enablebanking_sync.webhook import webhook_token_from_url
 
 
 def _tx(**overrides):
@@ -195,6 +207,63 @@ class JwtTests(unittest.TestCase):
         self.assertEqual(decoded["aud"], "api.enablebanking.com")
         self.assertIn("exp", decoded)
         self.assertEqual(header["kid"], config.application_id)
+
+
+class HomeAndFetchTests(unittest.TestCase):
+    def test_load_home_credentials(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            home = Path(raw)
+            (home / "application.json").write_text(
+                json.dumps({"app_id": "app-123"}),
+                encoding="utf-8",
+            )
+            (home / "private.key").write_text("-----BEGIN PRIVATE KEY-----\nX\n", encoding="utf-8")
+            (home / "session.json").write_text(
+                json.dumps({"session_id": "sess-9"}),
+                encoding="utf-8",
+            )
+            (home / "link.json").write_text(
+                json.dumps({"url": "https://tilisy.enablebanking.com/ais/start?sessionid=abc"}),
+                encoding="utf-8",
+            )
+            creds = load_home_credentials(home)
+            self.assertEqual(creds.application_id, "app-123")
+            self.assertIn("BEGIN PRIVATE KEY", creds.private_key_pem or "")
+            self.assertEqual(creds.session_id, "sess-9")
+            self.assertIn("tilisy.enablebanking.com", creds.linking_url or "")
+            self.assertEqual(creds.aspsp_country, "PT")
+
+    def test_redact_iban(self) -> None:
+        self.assertEqual(redact_iban("LT601010012345678901"), "LT60…8901")
+        self.assertIsNone(redact_iban(None))
+
+    def test_webhook_token_from_url(self) -> None:
+        token = webhook_token_from_url(
+            "https://webhook.site/1475019f-7adb-43ef-9f2c-af20a0e5d812"
+        )
+        self.assertEqual(token, "1475019f-7adb-43ef-9f2c-af20a0e5d812")
+
+    def test_pending_auth_freshness(self) -> None:
+        fresh = {"url": "https://example", "created_at": datetime.now(timezone.utc).isoformat()}
+        stale = {"url": "https://example", "created_at": "2020-01-01T00:00:00+00:00"}
+        self.assertTrue(_pending_auth_is_fresh(fresh))
+        self.assertFalse(_pending_auth_is_fresh(stale))
+
+    def test_jwt_metadata_omits_token(self) -> None:
+        key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        pem = key.private_bytes(
+            encoding=serialization.Encoding.PEM,
+            format=serialization.PrivateFormat.PKCS8,
+            encryption_algorithm=serialization.NoEncryption(),
+        ).decode("utf-8")
+        config = EnableBankingConfig(
+            application_id="11111111-2222-3333-4444-555555555555",
+            private_key_pem=pem,
+        )
+        meta = jwt_metadata(config)
+        self.assertEqual(meta["kid"], config.application_id)
+        self.assertEqual(meta["alg"], "RS256")
+        self.assertNotIn("token", meta)
 
 
 if __name__ == "__main__":

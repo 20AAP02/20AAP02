@@ -46,6 +46,23 @@ def make_jwt(config: EnableBankingConfig, lifetime_seconds: int = 3600) -> str:
     )
 
 
+def jwt_metadata(config: EnableBankingConfig, lifetime_seconds: int = 3600) -> dict[str, Any]:
+    token = make_jwt(config, lifetime_seconds=lifetime_seconds)
+    header = jwt.get_unverified_header(token)
+    claims = jwt.decode(
+        token,
+        options={"verify_signature": False, "verify_aud": False, "verify_iss": False},
+    )
+    return {
+        "kid": header.get("kid"),
+        "alg": header.get("alg"),
+        "iat": claims.get("iat"),
+        "exp": claims.get("exp"),
+        "iss": claims.get("iss"),
+        "aud": claims.get("aud"),
+    }
+
+
 def auth_header(config: EnableBankingConfig) -> dict[str, str]:
     return {"Authorization": f"Bearer {make_jwt(config)}"}
 

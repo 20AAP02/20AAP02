@@ -20,8 +20,16 @@ from .client import (
     get_account_transactions,
     get_application,
     get_session,
+    jwt_metadata,
     list_aspsps,
     start_authorization,
+)
+from .fetch import fetch_transactions_json, wait_and_fetch
+from .home import (
+    HomeCredentials,
+    ensure_home_layout,
+    load_home_credentials,
+    save_session,
 )
 from .plan import build_account_plan, build_expense_plans, plan_to_dict
 
@@ -34,30 +42,38 @@ def _read_env(name: str, default: str | None = None) -> str | None:
     return stripped or None
 
 
-def _private_key_from_env() -> str:
+def _private_key_pem(home: HomeCredentials) -> str:
     pem = _read_env("ENABLE_BANKING_PRIVATE_KEY")
     if pem:
         return pem.replace("\\n", "\n")
     path = _read_env("ENABLE_BANKING_PRIVATE_KEY_PATH")
     if path:
         return Path(path).read_text(encoding="utf-8")
+    if home.private_key_pem:
+        return home.private_key_pem
     raise EnableBankingError(
-        "Set ENABLE_BANKING_PRIVATE_KEY (PEM contents) or ENABLE_BANKING_PRIVATE_KEY_PATH."
+        "Missing RSA private key. Put it at ~/.enablebanking/private.key "
+        "or set ENABLE_BANKING_PRIVATE_KEY / ENABLE_BANKING_PRIVATE_KEY_PATH."
     )
 
 
 def load_config() -> EnableBankingConfig:
-    application_id = _read_env("ENABLE_BANKING_APPLICATION_ID")
+    ensure_home_layout()
+    home = load_home_credentials()
+    application_id = _read_env("ENABLE_BANKING_APPLICATION_ID") or home.application_id
     if not application_id:
-        raise EnableBankingError("Set ENABLE_BANKING_APPLICATION_ID.")
+        raise EnableBankingError(
+            "Missing application id. Write ~/.enablebanking/application.json "
+            "or set ENABLE_BANKING_APPLICATION_ID."
+        )
     return EnableBankingConfig(
         application_id=application_id,
-        private_key_pem=_private_key_from_env(),
-        redirect_url=_read_env("ENABLE_BANKING_REDIRECT_URL"),
-        session_id=_read_env("ENABLE_BANKING_SESSION_ID"),
-        aspsp_name=_read_env("ENABLE_BANKING_ASPSP_NAME", "Revolut") or "Revolut",
-        aspsp_country=_read_env("ENABLE_BANKING_ASPSP_COUNTRY", "LT") or "LT",
-        psu_type=_read_env("ENABLE_BANKING_PSU_TYPE", "personal") or "personal",
+        private_key_pem=_private_key_pem(home),
+        redirect_url=_read_env("ENABLE_BANKING_REDIRECT_URL") or home.redirect_url,
+        session_id=_read_env("ENABLE_BANKING_SESSION_ID") or home.session_id,
+        aspsp_name=_read_env("ENABLE_BANKING_ASPSP_NAME") or home.aspsp_name,
+        aspsp_country=_read_env("ENABLE_BANKING_ASPSP_COUNTRY") or home.aspsp_country,
+        psu_type=_read_env("ENABLE_BANKING_PSU_TYPE") or home.psu_type,
     )
 
 
@@ -83,7 +99,9 @@ def cmd_ping(config: EnableBankingConfig, _args: argparse.Namespace) -> int:
             "application_id": application.get("application_id") or config.application_id,
             "name": application.get("name"),
             "environment": application.get("environment"),
+            "active": application.get("active"),
             "redirect_urls": application.get("redirect_urls"),
+            "jwt": jwt_metadata(config),
         }
     )
     return 0
@@ -136,6 +154,7 @@ def cmd_session(config: EnableBankingConfig, args: argparse.Namespace) -> int:
     if not code:
         raise EnableBankingError("Provide --code or --redirect-url.")
     session = create_session(config, code)
+    save_session(session)
     accounts = session.get("accounts") or []
     _dump(
         {
@@ -148,14 +167,14 @@ def cmd_session(config: EnableBankingConfig, args: argparse.Namespace) -> int:
                     "uid": item.get("uid"),
                     "name": item.get("name") or item.get("product"),
                     "currency": item.get("currency"),
-                    "iban": ((item.get("account_id") or {}).get("iban")),
                     "mapped_account": map_bank_account(item),
                 }
                 for item in accounts
             ],
             "next": (
-                "Save session_id as the ENABLE_BANKING_SESSION_ID secret. "
-                "Then run `python3 -m enablebanking_sync plan --days 3`."
+                "Session id saved to ~/.enablebanking/session.json. "
+                "Run `python3 -m enablebanking_sync transactions --days 30` "
+                "or `python3 -m enablebanking_sync plan --days 3`."
             ),
         }
     )
@@ -236,6 +255,21 @@ def cmd_plan(config: EnableBankingConfig, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_transactions(config: EnableBankingConfig, args: argparse.Namespace) -> int:
+    home = load_home_credentials()
+    if args.wait:
+        payload = wait_and_fetch(
+            config,
+            days=args.days,
+            timeout_seconds=args.timeout,
+            linking_url=home.linking_url,
+        )
+    else:
+        payload = fetch_transactions_json(config, days=args.days)
+    _dump(payload)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="enablebanking_sync",
@@ -275,6 +309,19 @@ def build_parser() -> argparse.ArgumentParser:
         help="JSON file with open_banking_ids and optional soft_keys already in Notion",
     )
     plan.set_defaults(func=cmd_plan)
+
+    transactions = sub.add_parser(
+        "transactions",
+        help="Mint a JWT and GET /accounts/{uid}/transactions as JSON (token is not printed)",
+    )
+    transactions.add_argument("--days", type=int, default=30)
+    transactions.add_argument(
+        "--wait",
+        action="store_true",
+        help="Poll until Revolut linking + AIS consent complete, then fetch",
+    )
+    transactions.add_argument("--timeout", type=int, default=14400)
+    transactions.set_defaults(func=cmd_transactions)
     return parser
 
 
