@@ -1,0 +1,201 @@
+{
+  "defaults": {
+    "area": "Other",
+    "category": "Other",
+    "account": "Revolut",
+    "needs_review": true
+  },
+  "rules": [
+    {
+      "id": "mandarin",
+      "match": ["guanyu", "mandarin", "aula de mandarim"],
+      "name": "Transferência imediata SEPA+ para Guanyu",
+      "area": "Learning",
+      "category": "Mandarin",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "activobank",
+      "match": ["activobank", "activo bank"],
+      "name": "Transferência imediata SEPA+ para ActivoBank",
+      "area": "Giving / Transfers",
+      "category": "Account transfer",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "cursor",
+      "match": ["cursor"],
+      "name": "Cursor Pro",
+      "area": "Bills & Subscriptions",
+      "category": "Subscriptions",
+      "account": "Revolut subscriptions",
+      "needs_review": false
+    },
+    {
+      "id": "icloud",
+      "match": ["icloud"],
+      "name": "iCloud+",
+      "area": "Bills & Subscriptions",
+      "category": "Subscriptions",
+      "account": "Revolut subscriptions",
+      "needs_review": false
+    },
+    {
+      "id": "apple",
+      "match": ["apple.com", "apple"],
+      "name": "Apple",
+      "area": "Bills & Subscriptions",
+      "category": "Subscriptions",
+      "account": "Revolut subscriptions",
+      "needs_review": false
+    },
+    {
+      "id": "uber-eats",
+      "match": ["uber eats", "ubereats", "uber *eats"],
+      "name": "Uber Eats",
+      "area": "Lifestyle",
+      "category": "Dining / going out",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "uber",
+      "match": ["uber"],
+      "name": "Uber",
+      "area": "Car & Transport",
+      "category": "Transport",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "via-verde",
+      "match": ["via verde", "viaverde"],
+      "name": "Via Verde",
+      "area": "Car & Transport",
+      "category": "Via Verde",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "car-insurance",
+      "match": ["fidelidade", "liber 3g"],
+      "name": "Car insurance",
+      "area": "Car & Transport",
+      "category": "Car insurance",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "inspection",
+      "match": ["citv", "inspecao", "inspeção"],
+      "name": "Car inspection",
+      "area": "Car & Transport",
+      "category": "Car inspection",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "emel-permit",
+      "match": ["dístico", "distico", "emel permit"],
+      "name": "EMEL permit",
+      "area": "Car & Transport",
+      "category": "EMEL permit",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "emel",
+      "match": ["emel"],
+      "name": "EMEL parking",
+      "area": "Car & Transport",
+      "category": "EMEL parking",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "gasoline",
+      "match": ["galp", "repsol", "cepsa", "bp ", "prio", "gasoline", "gasoleo", "gasóleo", "combustivel", "combustível"],
+      "name": "Gasoline",
+      "area": "Car & Transport",
+      "category": "Gasoline",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "auchan",
+      "match": ["auchan", "pingo doce", "continente", "minipreco", "minipreço", "lidl", "aldi"],
+      "name": null,
+      "area": "Living",
+      "category": "Groceries",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "gym",
+      "match": ["sunsetfit", "gym", "fitness"],
+      "name": null,
+      "area": "Health & Care",
+      "category": "Gym",
+      "account": "Revolut",
+      "needs_review": true
+    },
+    {
+      "id": "vodafone",
+      "match": ["vodafone"],
+      "name": "Mobile (Vodafone)",
+      "area": "Bills & Subscriptions",
+      "category": "Mobile (Vodafone)",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "books",
+      "match": ["taprobana", "bertrand", "fnac"],
+      "name": null,
+      "area": "Learning",
+      "category": "Books",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "atm",
+      "match": ["atm", "cash withdrawal", "levantamento"],
+      "name": "Cash withdrawal",
+      "area": "Giving / Transfers",
+      "category": "Cash withdrawal",
+      "account": "Revolut",
+      "needs_review": false
+    },
+    {
+      "id": "mbway",
+      "match": ["mbway", "mb way"],
+      "name": null,
+      "area": "Giving / Transfers",
+      "category": "Friends / shared",
+      "account": "Revolut",
+      "needs_review": true
+    },
+    {
+      "id": "dining",
+      "match": [
+        "restaurante",
+        "cafetaria",
+        "cafe-taria",
+        "café",
+        "pq camoes",
+        "pq camões",
+        "hotel",
+        "forno",
+        "herdade",
+        "trecho nutritivo"
+      ],
+      "name": null,
+      "area": "Lifestyle",
+      "category": "Dining / going out",
+      "account": "Revolut",
+      "needs_review": false
+    }
+  ]
+}

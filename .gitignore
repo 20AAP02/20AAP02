@@ -1,0 +1,11 @@
+# Enable Banking / Open Banking secrets — never commit
+*.pem
+*.key
+.enablebanking/
+.env
+.env.*
+!/.env.example
+.cursor/skills/enable-banking-revolut/artifacts/
+__pycache__/
+*.py[cod]
+.pytest_cache/
