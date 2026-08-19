@@ -108,10 +108,11 @@ func main() {
 
 ## 📊 Statistics
 
-<p align="left">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api?username=20AAP02&show_icons=true&theme=vue-dark&hide_border=true&count_private=true" alt="GitHub stats">
-  <img width="47.5%" src="https://streak-stats.demolab.com/?user=20AAP02&theme=vue-dark&hide_border=true" alt="GitHub streak">
-</p>
-<p align="left">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=20AAP02&layout=compact&theme=vue-dark&hide_border=true" alt="Top languages">
+<p>
+  <a href="https://github.com/20AAP02?tab=followers">
+    <img src="https://img.shields.io/github/followers/20AAP02?style=for-the-badge&logo=github&label=Followers&labelColor=282828&color=6DB33F" alt="GitHub followers">
+  </a>
+  <a href="https://github.com/20AAP02?tab=repositories">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/20AAP02&query=$.public_repos&style=for-the-badge&logo=github&label=Public%20repos&labelColor=282828&color=00ADD8" alt="Public repositories">
+  </a>
 </p>
