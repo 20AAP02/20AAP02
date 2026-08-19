@@ -132,14 +132,26 @@ Never overwrite existing expense categories. Never delete rows. Incoming credits
 
 Config files: `config/notion.json`, `config/merchants.json`. Add new merchant rules there instead of one-off code.
 
-## Cursor Automation prompt
+## Cursor Automation
 
-Create a scheduled automation (daily) on this repo with Notion MCP. Credentials should already be in `~/.enablebanking/` (or Cursor env secrets). Prompt:
+Cursor has no API to create automations from a cloud agent. The ready-to-paste definition is in [`.cursor/automations/daily-revolut-notion.md`](../../automations/daily-revolut-notion.md).
+
+Create it at [cursor.com/automations/new](https://cursor.com/automations/new):
+
+- Name: `Daily Revolut → Notion expenses`
+- Schedule: `CRON_TZ=Europe/Lisbon 0 7 * * *` (07:00 Lisbon)
+- Repo: `github.com/20AAP02/20AAP02` (merge this skill to `main` first)
+- Tools: Notion MCP only — **disable pull-request creation**
+- Credentials: `~/.enablebanking/` on the Cloud Agent environment, or `ENABLE_BANKING_*` secrets
+
+Prompt:
 
 ```
-Follow the enable-banking-revolut skill.
+Follow the enable-banking-revolut skill in this repo.
 
-Fetch Revolut transactions from Enable Banking for the last 3 days and sync new debits into my Notion Expenses table. Update Revolut balances on the Accounts table. Skip anything already stored under Open banking id. Do not create credits as expenses. Summarise what you added, especially Needs review rows. If the Enable Banking session is expired, start `python3 -m enablebanking_sync transactions --wait` and send me the Revolut URL — I will only complete Revolut SCA.
+Do not edit git, do not open a pull request, and do not print PEMs, JWTs, IBANs, or session ids.
+
+Fetch Revolut transactions from Enable Banking for the last 3 days and sync new debits into Notion Expenses. Skip Open banking id duplicates and credits. List Needs review rows. If the session is expired, start `python3 -m enablebanking_sync transactions --wait` and send me the Revolut URL.
 ```
 
 ## Safety
