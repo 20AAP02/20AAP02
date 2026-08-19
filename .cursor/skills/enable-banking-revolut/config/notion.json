@@ -1,0 +1,98 @@
+{
+  "finances_page_url": "https://www.notion.so/3af2c12c5a298167bee5f0f61e555c07",
+  "expenses": {
+    "data_source_id": "efe51b0d-7e9b-4cd0-bb70-59b02672ad99",
+    "data_source_url": "collection://efe51b0d-7e9b-4cd0-bb70-59b02672ad99",
+    "database_url": "https://www.notion.so/ccf25bdab67046759084cef0d4aedc32"
+  },
+  "accounts": {
+    "data_source_id": "364e1ffa-6d82-4578-b4de-44e40e0e3863",
+    "data_source_url": "collection://364e1ffa-6d82-4578-b4de-44e40e0e3863",
+    "database_url": "https://www.notion.so/307f45d091eb4b76bccecc541095137d",
+    "pages": {
+      "Revolut": "https://www.notion.so/3af2c12c5a2981589537d732696f8da5",
+      "Revolut subscriptions": "https://www.notion.so/3af2c12c5a298103bd63f2fa3199e926",
+      "Revolut savings": "https://www.notion.so/3af2c12c5a29818196f0c94da6c32ce1",
+      "Revolut Ford Fiesta": "https://www.notion.so/3af2c12c5a29818494e1e8395d6cc5a1"
+    }
+  },
+  "months": {
+    "data_source_id": "e2f00920-a3ef-45e5-899a-d666b327ff52",
+    "data_source_url": "collection://e2f00920-a3ef-45e5-899a-d666b327ff52",
+    "pages": {
+      "2026-01": "https://www.notion.so/3af2c12c5a2981e89dc0deb9f2afa88b",
+      "2026-02": "https://www.notion.so/3af2c12c5a29818f807bc9a04c4d2a66",
+      "2026-03": "https://www.notion.so/3af2c12c5a298156924fcf853eb82f0e",
+      "2026-04": "https://www.notion.so/3af2c12c5a29810da408f715ddd449cb",
+      "2026-05": "https://www.notion.so/3af2c12c5a2981be8cd4cdcc657077a3",
+      "2026-06": "https://www.notion.so/3af2c12c5a298151a01ac404805acfcf",
+      "2026-07": "https://www.notion.so/3af2c12c5a29814493d7fb2055ddfd0b",
+      "2026-08": "https://www.notion.so/3af2c12c5a298117b645d0764b26bf72",
+      "2026-09": "https://www.notion.so/3af2c12c5a298184abe0f806e11c14a9",
+      "2026-10": "https://www.notion.so/3af2c12c5a29812c8a23f5dd897802b9",
+      "2026-11": "https://www.notion.so/3af2c12c5a2981e3b0c9df62ffa8b042",
+      "2026-12": "https://www.notion.so/3af2c12c5a2981ad99d1dab0a5bd5101"
+    }
+  },
+  "expense_account_options": [
+    "Revolut",
+    "Revolut main",
+    "Revolut subscriptions",
+    "Revolut savings",
+    "Revolut Ford Fiesta",
+    "Revolut vault",
+    "ActivoBank",
+    "Nokia payroll",
+    "Broker",
+    "Other"
+  ],
+  "areas": [
+    "Car & Transport",
+    "Living",
+    "Health & Care",
+    "Learning",
+    "Lifestyle",
+    "Bills & Subscriptions",
+    "Giving / Transfers",
+    "Other"
+  ],
+  "categories": [
+    "Car purchase",
+    "Car insurance",
+    "EMEL parking",
+    "Car IUC",
+    "Car inspection",
+    "Car maintenance",
+    "Gasoline",
+    "Via Verde",
+    "Transport",
+    "Car service",
+    "Car tyres",
+    "EMEL permit",
+    "Car exterior cleaning",
+    "Car interior vacuum",
+    "Car plastics cleaning",
+    "Car parking",
+    "Car repairs",
+    "Groceries",
+    "Dining / going out",
+    "Clothes",
+    "Health",
+    "Gym",
+    "Personal care",
+    "Mandarin",
+    "Books",
+    "Courses",
+    "Subscriptions",
+    "Mobile (Vodafone)",
+    "Donations",
+    "CL / Movimento",
+    "Friends / shared",
+    "Family",
+    "Events",
+    "Reimbursement",
+    "Account transfer",
+    "Cash withdrawal",
+    "Other"
+  ]
+}
