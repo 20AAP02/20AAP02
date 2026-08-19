@@ -148,6 +148,40 @@ def get_session(config: EnableBankingConfig, session_id: str) -> dict[str, Any]:
     return _request(config, "GET", f"/sessions/{session_id}")
 
 
+def coerce_accounts(accounts: list[Any] | None) -> list[dict[str, Any]]:
+    """GET /sessions returns account UIDs as strings; POST /sessions returns objects."""
+    resolved: list[dict[str, Any]] = []
+    for item in accounts or []:
+        if isinstance(item, str):
+            resolved.append({"uid": item})
+            continue
+        if not isinstance(item, dict):
+            continue
+        copy = dict(item)
+        if not copy.get("uid") and copy.get("account_uid"):
+            copy["uid"] = copy["account_uid"]
+        resolved.append(copy)
+    return resolved
+
+
+def session_accounts(session: dict[str, Any]) -> list[dict[str, Any]]:
+    by_uid: dict[str, dict[str, Any]] = {}
+    for item in coerce_accounts(session.get("accounts_data")):
+        uid = str(item.get("uid") or "")
+        if uid:
+            by_uid[uid] = item
+    merged: list[dict[str, Any]] = []
+    for item in coerce_accounts(session.get("accounts")):
+        uid = str(item.get("uid") or "")
+        extra = by_uid.get(uid) or {}
+        merged.append({**extra, **item})
+    return merged
+
+
+def get_account_details(config: EnableBankingConfig, account_uid: str) -> dict[str, Any]:
+    return _request(config, "GET", f"/accounts/{account_uid}/details")
+
+
 def get_account_balances(config: EnableBankingConfig, account_uid: str) -> dict[str, Any]:
     return _request(config, "GET", f"/accounts/{account_uid}/balances")
 

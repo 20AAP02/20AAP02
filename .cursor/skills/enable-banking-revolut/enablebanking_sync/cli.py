@@ -17,11 +17,13 @@ from .client import (
     code_from_redirect_url,
     create_session,
     get_account_balances,
+    get_account_details,
     get_account_transactions,
     get_application,
     get_session,
     jwt_metadata,
     list_aspsps,
+    session_accounts,
     start_authorization,
 )
 from .fetch import fetch_transactions_json, wait_and_fetch
@@ -183,7 +185,18 @@ def cmd_session(config: EnableBankingConfig, args: argparse.Namespace) -> int:
 
 def _session_accounts(config: EnableBankingConfig, session_id: str) -> list[dict[str, Any]]:
     session = get_session(config, session_id)
-    return session.get("accounts") or []
+    accounts = session_accounts(session)
+    enriched: list[dict[str, Any]] = []
+    for account in accounts:
+        uid = str(account.get("uid") or "")
+        if uid and not (account.get("name") or account.get("product")):
+            try:
+                details = get_account_details(config, uid)
+                account = {**details, **account}
+            except EnableBankingError:
+                pass
+        enriched.append(account)
+    return enriched
 
 
 def cmd_accounts(config: EnableBankingConfig, args: argparse.Namespace) -> int:

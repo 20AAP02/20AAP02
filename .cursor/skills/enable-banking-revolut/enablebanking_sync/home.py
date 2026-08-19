@@ -128,6 +128,10 @@ def ensure_home_layout(home: Path | None = None) -> Path:
     return resolved
 
 
+def load_session(home: Path | None = None) -> dict[str, Any]:
+    return _read_json((home or home_dir()) / "session.json")
+
+
 def save_session(session: dict[str, Any], home: Path | None = None) -> Path:
     resolved = ensure_home_layout(home)
     accounts = []

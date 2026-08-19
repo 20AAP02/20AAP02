@@ -10,15 +10,18 @@ from .client import (
     EnableBankingConfig,
     EnableBankingError,
     create_session,
+    get_account_details,
     get_account_transactions,
     get_application,
     get_session,
     jwt_metadata,
+    session_accounts,
     start_authorization,
 )
 from .home import (
     clear_pending_auth,
     load_pending_auth,
+    load_session,
     save_pending_auth,
     save_session,
     save_status,
@@ -66,6 +69,28 @@ def redact_account(account: dict[str, Any]) -> dict[str, Any]:
     return copy
 
 
+def _enrich_account(config: EnableBankingConfig, account: dict[str, Any]) -> dict[str, Any]:
+    uid = str(account.get("uid") or "")
+    if account.get("name") or account.get("product") or account.get("iban"):
+        return account
+    if not uid:
+        return account
+    try:
+        details = get_account_details(config, uid)
+    except EnableBankingError:
+        return account
+    return {**details, **account}
+
+
+def _accounts_from_home_session() -> dict[str, dict[str, Any]]:
+    stored = load_session()
+    by_uid: dict[str, dict[str, Any]] = {}
+    for item in stored.get("accounts") or []:
+        if isinstance(item, dict) and item.get("uid"):
+            by_uid[str(item["uid"])] = item
+    return by_uid
+
+
 def fetch_transactions_json(
     config: EnableBankingConfig,
     *,
@@ -77,23 +102,32 @@ def fetch_transactions_json(
         raise EnableBankingError("No session id. Complete Revolut SCA first.")
     application = get_application(config)
     session = get_session(config, resolved_session)
+    stored_accounts = _accounts_from_home_session()
     date_to = date.today()
     date_from = date_to - timedelta(days=days)
     accounts_out: list[dict[str, Any]] = []
-    for account in session.get("accounts") or []:
+    for account in session_accounts(session):
         uid = str(account.get("uid") or "")
+        if uid in stored_accounts:
+            account = {**stored_accounts[uid], **account}
+        account = _enrich_account(config, account)
         transactions = get_account_transactions(
             config,
             uid,
             date_from=date_from.isoformat(),
             date_to=date_to.isoformat(),
         )
+        identification = account.get("account_id") or {}
+        iban = None
+        if isinstance(identification, dict):
+            iban = identification.get("iban")
+        iban = iban or account.get("iban")
         accounts_out.append(
             {
                 "uid": uid,
                 "name": account.get("name") or account.get("product"),
                 "currency": account.get("currency"),
-                "iban": redact_iban(((account.get("account_id") or {}).get("iban"))),
+                "iban": redact_iban(str(iban) if iban else None),
                 "transaction_count": len(transactions),
                 "transactions": transactions,
             }

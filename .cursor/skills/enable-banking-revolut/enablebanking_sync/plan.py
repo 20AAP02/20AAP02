@@ -70,6 +70,9 @@ def build_account_plan(
     iban = None
     if isinstance(identification, dict):
         iban = identification.get("iban")
+    if not iban:
+        raw_iban = account.get("iban")
+        iban = str(raw_iban) if raw_iban else None
     return AccountBalancePlan(
         uid=str(account.get("uid") or account.get("account_uid") or ""),
         name=str(account.get("name") or account.get("product") or "Revolut"),

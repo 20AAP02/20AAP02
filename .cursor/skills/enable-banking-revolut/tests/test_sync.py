@@ -23,8 +23,10 @@ from enablebanking_sync.classify import (
 from enablebanking_sync.client import (
     EnableBankingConfig,
     code_from_redirect_url,
+    coerce_accounts,
     jwt_metadata,
     make_jwt,
+    session_accounts,
 )
 from enablebanking_sync.fetch import _pending_auth_is_fresh, redact_iban
 from enablebanking_sync.home import load_home_credentials
@@ -248,6 +250,18 @@ class HomeAndFetchTests(unittest.TestCase):
         stale = {"url": "https://example", "created_at": "2020-01-01T00:00:00+00:00"}
         self.assertTrue(_pending_auth_is_fresh(fresh))
         self.assertFalse(_pending_auth_is_fresh(stale))
+
+    def test_session_accounts_accepts_uid_strings(self) -> None:
+        accounts = session_accounts(
+            {
+                "accounts": ["uid-1", {"uid": "uid-2", "name": "Savings"}],
+                "accounts_data": [{"uid": "uid-1", "currency": "EUR"}],
+            }
+        )
+        self.assertEqual(accounts[0]["uid"], "uid-1")
+        self.assertEqual(accounts[0]["currency"], "EUR")
+        self.assertEqual(accounts[1]["name"], "Savings")
+        self.assertEqual(coerce_accounts(["abc"])[0]["uid"], "abc")
 
     def test_jwt_metadata_omits_token(self) -> None:
         key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
